@@ -1,0 +1,3 @@
+Pillow
+jpeg4py
+numpy
