@@ -16,8 +16,8 @@ def main():
         for r in np.digitize(np.array(Image.open(input_img_filename).convert(mode='L')), BOUNDS)
     )
     # TODO: how to do this smart with iterator and not list cast? (or do above instead, then no need)
-    for l in list(g)[::pixel_scale]:
-        print(''.join(list(l)[::pixel_scale]))
+    sys.stdout.writelines(''.join(list(r)[::pixel_scale]) + '\n' for r in list(g)[::pixel_scale])
+    sys.stdout.flush()
 
 
 if __name__ == '__main__':
