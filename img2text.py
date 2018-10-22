@@ -10,7 +10,7 @@ BOUNDS = list(range(0, 2**8, 2**8 // (len(GRAY_CHARS) - 1)))
 
 def make_text_from_image(input_img_filename, pixel_scale):
     return GRAY_CHARS[
-        np.digitize(np.array(Image.open(input_img_filename).convert(mode='L')), BOUNDS)[::pixel_scale, ::pixel_scale]
+        np.digitize(np.array(Image.open(input_img_filename).convert(mode='L'))[::pixel_scale, ::pixel_scale], BOUNDS)
     ]
 
 
