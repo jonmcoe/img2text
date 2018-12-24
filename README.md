@@ -6,7 +6,7 @@ May make this into a package and/or use proper `argparse` or `click` for cli arg
 
 ### Usage
 
-`python im2text.py [filename] [optional integer scaling factor]`
+`python img2text.py [filename] [optional integer scaling factor]`
 
 ### Example
 
